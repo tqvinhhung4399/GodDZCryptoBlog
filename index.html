@@ -1,0 +1,1556 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GodDZ CryptoCurrency Blog</title>
+    <!-- ****************************************************************************************************** -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/MyCSS.css" rel="stylesheet">
+
+    <!-- File VENDOR mượn của template khác để làm 3 cái icon fb, tt, insta cho đẹp-->
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- ****************************************************************************************************** -->
+    <!-- JS SlideShow -->
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-22.2.8.mini.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+                { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var jssor_1_options = {
+                $AutoPlay: true,
+                $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: jssor_1_SlideshowTransitions,
+                    $TransitionsOrder: 1
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1280);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- CSS SlideShow -->
+    <style>
+        .jssorb05 {
+            position: absolute;
+        }
+
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: url('images/b05.png') no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
+
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
+
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
+
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
+
+        .jssora12l, .jssora12r {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 46px;
+            cursor: pointer;
+            background: url('images/a12.png') no-repeat;
+            overflow: hidden;
+        }
+
+        .jssora12l {
+            background-position: -16px -37px;
+        }
+
+        .jssora12r {
+            background-position: -75px -37px;
+        }
+
+        .jssora12l:hover {
+            background-position: -136px -37px;
+        }
+
+        .jssora12r:hover {
+            background-position: -195px -37px;
+        }
+
+        .jssora12l.jssora12ldn {
+            background-position: -256px -37px;
+        }
+
+        .jssora12r.jssora12rdn {
+            background-position: -315px -37px;
+        }
+    </style>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- JS web cuộn -->
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.menu>ul>li>a').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target
+                        || $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body')
+                            .animate({ scrollTop: targetOffset }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <!-- JS web cuộn cho nút HOME-->
+    <script>
+        $(document).ready(function () {
+            $('.menu>a').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target
+                        || $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body')
+                            .animate({ scrollTop: targetOffset }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body background="images/BGprice.gif">
+    <!-- ****************************************************************************************************** -->
+    <!--Slideshow-->
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1280px;height:250px;overflow:hidden;visibility:hidden; margin-bottom: 15px;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('images/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+
+        <!-- Hiệu chỉnh độ rộng và độ cao cho các ảnh trong slideshow-->
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1280px;height:250px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="images/CC8.gif" />
+            </div>
+            <div>
+                <img data-u="image" src="images/CC6.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="images/CC5.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="images/CC7.jpg" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+    </div>
+
+    <!-- ****************************************************************************************************** -->
+    <!--Navbar - MENU-->
+    <nav class="navbar navbar-default" id="navbar">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header menu">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#jssor_1">
+                    <img src="images/home.jpg" width="25" height="25" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse menu" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#ICO"> ICO Review <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#HOME"> News </a></li>
+                    <li class="dropdown menu">
+                        <a href="INSTRUCTION" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Instruction <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#TRADE">Trading</a></li>
+                            <li><a href="#LEND">Lending</a></li>
+                            <li><a href="#STAKE">Staking</a></li>
+                            <li><a href="#MINE">Mining</a></li>
+                            <li><a href="#AIRDROPANDBOUNTY">Airdrop and Bounty</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#WALLET"> Wallet </a></li>
+                    <li><a href="#CCEXCHANGE"> CC Exchange </a></li>
+                    <li><a href="#CCMARKET"> CC Market </a></li>
+                    <li><a href="#INFOTECH"> Technology </a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Coins/Tokens: e.g. Bitcoin">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#SIGNUP">Sign Up</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quick Link<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://coinmarketcap.com/" target="_blank">CoinMarketCap</a></li>
+                            <li><a href="https://bitcointalk.org/" target="_blank">Bitcoin Talk</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- HOME -->
+    <section id="HOME" class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- CC PRICE -->
+                <div class="col-md-5 Rate" style="overflow: auto; max-height: 500px;">
+                    <table border="3" style="border-collapse: collapse; font-weight: bold; width: 100%;">
+                        <tbody style="text-align: center; color: #FFFFFF; background-color: #000000;">
+                            <tr>
+                                <td colspan="5"><h1><span style="color: #E200F0;">CryptoCurrency Price</span></h1></td>
+                            </tr>
+                            <tr>
+                                <td width="137"><p>Name</p></td>
+                                <td width="69"><p>Symbol</p></td>
+                                <td width="83"><p>Price</p></td>
+                                <td width="125"><p>Volume (24h)</p></td>
+                                <td width="123"><p>Change (24h)</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/BTC.png" style="float: left; margin:3px;" /><p class="pName">Bitcoin</p></td>
+                                <td><p class="pSymbol">BTC</p></td>
+                                <td><p class="pPrice">$6.826,50</p></td>
+                                <td><p class="pVolume">$3.868.620.000</p></td>
+                                <td><p class="pChange">2,75%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ETH.png" style="float: left; margin:3px;" /><p class="pName">Ethereum</p></td>
+                                <td><p class="pSymbol">ETH</p></td>
+                                <td><p class="pPrice">$494,26</p></td>
+                                <td><p class="pVolume">$1.410.990.000	</p></td>
+                                <td><p class="pChange">4,67%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/XRP.png" style="float: left; margin:3px;" /><p class="pName">Ripple</p></td>
+                                <td><p class="pSymbol">XRP</p></td>
+                                <td><p class="pPrice">$0,491424</p></td>
+                                <td><p class="pVolume">$237.631.000</p></td>
+                                <td><p class="pChange">4,19%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/BCH.png" style="float: left; margin:3px;" /><p class="pName">Bitcoin Cash</p></td>
+                                <td><p class="pSymbol">BCH</p></td>
+                                <td><p class="pPrice">$771,09</p></td>
+                                <td><p class="pVolume">$691.620.000</p></td>
+                                <td><p class="pChange">6,41%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/EOS.png" style="float: left; margin:3px;" /><p class="pName">EOS</p></td>
+                                <td><p class="pSymbol">EOS</p></td>
+                                <td><p class="pPrice">$9,02</p></td>
+                                <td><p class="pVolume">$533.882.000</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-12,96%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/LTC.png" style="float: left; margin:3px;" /><p class="pName">Litecoin</p></td>
+                                <td><p class="pSymbol">LTC</p></td>
+                                <td><p class="pPrice">$85,11</p></td>
+                                <td><p class="pVolume">$245.089.000</p></td>
+                                <td><p class="pChange">3,03%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/XLM.png" style="float: left; margin:3px;" /><p class="pName">Stellar</p></td>
+                                <td><p class="pSymbol">XLM</p></td>
+                                <td><p class="pPrice">$0,209</p></td>
+                                <td><p class="pVolume">$37.889.400</p></td>
+                                <td><p class="pChange">2,37%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ADA.png" style="float: left; margin:3px;" /><p class="pName">Cardano</p></td>
+                                <td><p class="pSymbol">ADA</p></td>
+                                <td><p class="pPrice">$0,148</p></td>
+                                <td><p class="pVolume">$52.374.100</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-8,33%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/MIOTA.png" style="float: left; margin:3px;" /><p class="pName">IOTA</p></td>
+                                <td><p class="pSymbol">MIOTA</p></td>
+                                <td><p class="pPrice">$1,12</p></td>
+                                <td><p class="pVolume">$47.932.100</p></td>
+                                <td><p class="pChange">4,55%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/USDT.png" style="float: left; margin:3px;" /><p class="pName">Tether</p></td>
+                                <td><p class="pSymbol">USDT</p></td>
+                                <td><p class="pPrice">$1.01</p></td>
+                                <td><p class="pVolume">$2.355.420.000</p></td>
+                                <td><p class="pChange">0.23%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/NEO.png" style="float: left; margin:3px;" /><p class="pName">NEO</p></td>
+                                <td><p class="pSymbol">NEO</p></td>
+                                <td><p class="pPrice">$39,95</p></td>
+                                <td><p class="pVolume">$135.494.000</p></td>
+                                <td><p class="pChange">7,22%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/QTUM.png" style="float: left; margin:3px;" /><p class="pName">Qtum</p></td>
+                                <td><p class="pSymbol">QTUM</p></td>
+                                <td><p class="pPrice">$9,17</p></td>
+                                <td><p class="pVolume">$125.245.000</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-0,22%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/TRON.png" style="float: left; margin:3px;" /><p class="pName">TRON</p></td>
+                                <td><p class="pSymbol">TRX</p></td>
+                                <td><p class="pPrice">$0,033</p></td>
+                                <td><p class="pVolume">$150.557.000</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-8,75%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/XMR.png" style="float: left; margin:3px;" /><p class="pName">Monero</p></td>
+                                <td><p class="pSymbol">XMR</p></td>
+                                <td><p class="pPrice">$125,60</p></td>
+                                <td><p class="pVolume">$34.348.900</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-8,87%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/DASH.png" style="float: left; margin:3px;" /><p class="pName">Dash</p></td>
+                                <td><p class="pSymbol">DASH</p></td>
+                                <td><p class="pPrice">$223,59</p></td>
+                                <td><p class="pVolume">$133.887.000</p></td>
+                                <td><p class="pChange">5,75%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/NEM.png" style="float: left; margin:3px;" /><p class="pName">NEM</p></td>
+                                <td><p class="pSymbol">XEM</p></td>
+                                <td><p class="pPrice">$0,163</p></td>
+                                <td><p class="pVolume">$11.617.400</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-10,46%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/BNB.png" style="float: left; margin:3px;" /><p class="pName">Binance Coin</p></td>
+                                <td><p class="pSymbol">BNB</p></td>
+                                <td><p class="pPrice">$12,850</p></td>
+                                <td><p class="pVolume">$40.206.700</p></td>
+                                <td><p class="pChange">4.65%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/XTZ.png" style="float: left; margin:3px;" /><p class="pName">Tezos</p></td>
+                                <td><p class="pSymbol">XTZ</p></td>
+                                <td><p class="pPrice">$2,20</p></td>
+                                <td><p class="pVolume">$7.461.170</p></td>
+                                <td><p class="pChange">3,00%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/VEN.png" style="float: left; margin:3px;" /><p class="pName">VeChain</p></td>
+                                <td><p class="pSymbol">VEN</p></td>
+                                <td><p class="pPrice">$2,32</p></td>
+                                <td><p class="pVolume">$68.554.400</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-6,90%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/XVG.png" style="float: left; margin:3px;" /><p class="pName">Verge</p></td>
+                                <td><p class="pSymbol">XVG</p></td>
+                                <td><p class="pPrice">$0,022</p></td>
+                                <td><p class="pVolume">$7.417.260</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-9,76%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/HT.png" style="float: left; margin:3px;" /><p class="pName">Houbi Token</p></td>
+                                <td><p class="pSymbol">HT</p></td>
+                                <td><p class="pPrice">$3,18</p></td>
+                                <td><p class="pVolume">$54.244.400</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-9,59%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/UBT.png" style="float: left; margin:3px;" /><p class="pName">Unibright</p></td>
+                                <td><p class="pSymbol">UBT</p></td>
+                                <td><p class="pPrice">$0,034</p></td>
+                                <td><p class="pVolume">$68.686</p></td>
+                                <td><p class="pChange">2,27%</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/OST.png" style="float: left; margin:3px;" /><p class="pName">IOST</p></td>
+                                <td><p class="pSymbol">IOST</p></td>
+                                <td><p class="pPrice">$0,02</p></td>
+                                <td><p class="pVolume">$21.199.600</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-13,42%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/HYDRO.png" style="float: left; margin:3px;" /><p class="pName">Hydro</p></td>
+                                <td><p class="pSymbol">HYDRO</p></td>
+                                <td><p class="pPrice">$0,006</p></td>
+                                <td><p class="pVolume">$502.974</p></td>
+                                <td><p class="pChange"><span style="color: #FF0004;">-5,30%</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/WPR.png" style="float: left; margin:3px;" /><p class="pName">WePower</p></td>
+                                <td><p class="pSymbol">WPR</p></td>
+                                <td><p class="pPrice">$0,041</p></td>
+                                <td><p class="pVolume">$540.547</p></td>
+                                <td><p class="pChange">7,21%</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Info + Sub + Follow -->
+                <div class="col-md-4" style="overflow: hidden; max-height: 500px;">
+                    <center>
+                        <div style="margin-top: 20px;">
+                            <img src="images/GodDZ.gif" width="100%" height="70px;" />
+                        </div>
+                        <div class="mx-auto" style="margin-top: 50px;">
+                            <form action="Thanku4subscribe.html" method="post">
+                                <div>
+                                    <input style="height: 50px;" type="email" class="form-control form-control-lg" placeholder="Enter your email(e.g. hungtqvse130178@fpt.edu.vn)">
+                                </div>
+                                <div style="margin-top: 25px; margin-left: 30px; margin-right: 30px;">
+                                    <button type="submit" class="btn btn-block btn-lg btn-primary">SUBSCRIBE</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <img src="images/Follow.jpg" width="100%" />
+                            <div class="text-lg-right my-auto" style="background-color: #000000; padding-top: 20px; padding-bottom: 20px;">
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item mr-3">
+                                        <a href="https://www.facebook.com/HungTQV.GodDZ" target="_blank">
+                                            <i class="fa fa-facebook fa-2x fa-fw"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item mr-3">
+                                        <a href="https://twitter.com/tqvinhhung4399" target="_blank">
+                                            <i class="fa fa-twitter fa-2x fa-fw"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="https://www.instagram.com/tqvinhhung4399/" target="_blank">
+                                            <i class="fa fa-instagram fa-2x fa-fw"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div style="height: 20px; background-color: #000000; margin-bottom: 30px;">
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <!-- Home NEWS -->
+                <div class="col-md-3">
+                    <aside>
+                        <div class="NewsInfo">
+                            <h2> News </h2>
+                            <div class="promotion">
+                                <img src="images/WOW.gif" width="70" height="70" />
+                            </div>
+                        </div>
+
+
+                        <div class="newInfo">
+                            <img src="images/News1.jpg" />
+                            <a href="#"><p>Đà phục hồi Bitcoin “tan vỡ” dần khi giá giảm xuống...</p></a>
+                        </div>
+
+                        <div class="newInfo">
+                            <img src="images/News2.jpg" />
+                            <a href="#"><p>Cựu kinh tế trưởng ngân hàng thế giới: Bitcoin sẽ thất...</p></a>
+                        </div>
+
+                        <div class="newInfo">
+                            <img src="images/News3.jpg" />
+                            <a href="#"><p>Sàn Bancor bị tấn công, một lượng ETH trị giá 12...</p></a>
+                        </div>
+
+                        <div class="newInfo">
+                            <img src="images/News4.jpg" />
+                            <a href="#"><p>Ripple được niêm yết trên 3 sàn giao dịch mới, thúc...</p></a>
+                        </div>
+
+                        <div class="newInfo">
+                            <img src="images/News5.jpg" />
+                            <a href="#"><p>Đồng sáng lập Google Sergey Brinh thừa nhận...</p></a>
+                        </div>
+
+                        <div class="newInfo">
+                            <img src="images/News6.jpg" />
+                            <a href="#"><p>Sàn CBOE nộp đơn mở ETF Bitcoin lên SEC, gia tăng...</p></a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- ICO review -->
+    <section id="ICO" style="padding-top: 50px;">
+        <div class="container-fluid">
+            <center>
+                <h1>ICO Review</h1>
+            </center>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4" style="overflow: auto;">
+                    <table width="100%" height="600" border="3" style="border-collapse: collapse; background-color: #000000;">
+                        <tbody>
+                            <tr>
+                                <td width="20%"><p class="ICOtitle">Name</p></td>
+                                <td width="10%"><p class="ICOtitle">Rate</p></td>
+                                <td width="10%"><p class="ICOtitle">Hype</p></td>
+                                <td width="10%"><p class="ICOtitle">Scam</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO1.png" style="float: left; margin:3px;" /><p class="ICOName">MAZEBITS</p></td>
+                                <td><p class="ICORATE">4.9/5</p></td>
+                                <td><p class="ICOHSM">VERY HIGH</p></td>
+                                <td><p class="ICOHSM">VERY LOW</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO5.png" style="float: left; margin:3px;" /><p class="ICOName">YUDI</p></td>
+                                <td><p class="ICORATE">4.8/5</p></td>
+                                <td><p class="ICOHSM"><span style="color: #FFC600;">MID</span></p></td>
+                                <td><p class="ICOHSM">VERY LOW</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO6.png" style="float: left; margin:3px;" /><p class="ICOName">ARBITAO</p></td>
+                                <td><p class="ICORATE">4.8/5</p></td>
+                                <td><p class="ICOHSM"><span style="color: #FFC600;">MID</span></p></td>
+                                <td><p class="ICOHSM">VERY LOW</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO7.png" style="float: left; margin:3px;" /><p class="ICOName">UPSTAKE</p></td>
+                                <td><p class="ICORATE">4.8/5</p></td>
+                                <td><p class="ICOHSM">VERY HIGH</p></td>
+                                <td><p class="ICOHSM">VERY LOW</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO8.png" style="float: left; margin:3px;" /><p class="ICOName">ARBITRAGING</p></td>
+                                <td><p class="ICORATE">4.7/5</p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">HIGH</span></p></td>
+                                <td><p class="ICOHSM">VERY LOW</p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO9.png" style="float: left; margin:3px;" /><p class="ICOName">QOMPASS</p></td>
+                                <td><p class="ICORATE"><span style="color: #52C96F;">4.4/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">HIGH</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">LOW</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO10.png" style="float: left; margin:3px;" /><p class="ICOName">LENDERA</p></td>
+                                <td><p class="ICORATE"><span style="color: #52C96F;">4.3/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">HIGH</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">LOW</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO11.png" style="float: left; margin:3px;" /><p class="ICOName">SPEKTOKEN</p></td>
+                                <td><p class="ICORATE"><span style="color: #52C96F;">4.1/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">LOW</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">LOW</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO12.png" style="float: left; margin:3px;" /><p class="ICOName">HOMEBLOCKCOIN</p></td>
+                                <td><p class="ICORATE"><span style="color: #7B7B7B;">PENDING</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">PENDING</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">PENDING</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO13.png" style="float: left; margin:3px;" /><p class="ICOName">EXACOIN</p></td>
+                                <td><p class="ICORATE"><span style="color: #FFC600;">3.8/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">HIGH</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #FFC600;">MID</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO23.png" style="float: left; margin:3px;" /><p class="ICOName">BIZCAZH</p></td>
+                                <td><p class="ICORATE"><span style="color: #FFC600;">3.4/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">LOW</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">LOW</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO21.png" style="float: left; margin:3px;" /><p class="ICOName">PAGAREX</p></td>
+                                <td><p class="ICORATE"><span style="color: #FFC600;">3.2/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">HIGH</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">HIGH</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO24.jpg" style="float: left; margin:3px;" /><p class="ICOName">MYBETTERCOIN</p></td>
+                                <td><p class="ICORATE"><span style="color: #FF0004;">2.2/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #FFC600;">MID</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">HIGH</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO22.png" style="float: left; margin:3px;" /><p class="ICOName">HAVANACOIN</p></td>
+                                <td><p class="ICORATE"><span style="color: #A70002;">1.5/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">VERY LOW</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">VERY HIGH</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO14.png" style="float: left; margin:3px;" /><p class="ICOName">POLYNETWORK</p></td>
+                                <td><p class="ICORATE"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO15.png" style="float: left; margin:3px;" /><p class="ICOName">IFAN</p></td>
+                                <td><p class="ICORATE"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO16.png" style="float: left; margin:3px;" /><p class="ICOName">MARTCOIN</p></td>
+                                <td><p class="ICORATE"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO17.png" style="float: left; margin:3px;" /><p class="ICOName">ECOMCASH</p></td>
+                                <td><p class="ICORATE"><span style="color: #A70002;">0.0/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO18.png" style="float: left; margin:3px;" /><p class="ICOName">FALCONCOIN</p></td>
+                                <td><p class="ICORATE"><span style="color: #A70002;">0.0/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/ICO19.png" style="float: left; margin:3px;" /><p class="ICOName">LOOPX</p></td>
+                                <td><p class="ICORATE"><span style="color: #A70002;">0.0/5</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <table width="100%" height="600" border="3" style="border-collapse: collapse; background-color: #000000;">
+                        <tbody>
+                            <tr>
+                                <td width="10%" height="25"><p class="ICOtitle">Moon</p></td>
+                                <td width="15%" height="25"><p class="ICOtitle">ICO Start</p></td>
+                                <td width="15%" height="25"><p class="ICOtitle">ICO End</p></td>
+                                <td width="10%" height="25"><p class="ICOtitle">Stage</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM">VERY HIGH</p></td>
+                                <td><p class="ICOTE">18.12.17</p></td>
+                                <td><p class="ICOTE">08.01.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM">VERY HIGH</p></td>
+                                <td><p class="ICOTE">01.08.18</p></td>
+                                <td><p class="ICOTE">25.08.18</p></td>
+                                <td><p class="ICOStage">ICO</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM">VERY HIGH</p></td>
+                                <td><p class="ICOTE">01.07.18</p></td>
+                                <td><p class="ICOTE">17.07.18</p></td>
+                                <td><p class="ICOStage">ICO</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM">VERY HIGH</p></td>
+                                <td><p class="ICOTE">01.05.18</p></td>
+                                <td><p class="ICOTE">31.05.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #FFC600;">MID</span></p></td>
+                                <td><p class="ICOTE">15.01.18</p></td>
+                                <td><p class="ICOTE">16.02.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #52C96F;">HIGH</span></p></td>
+                                <td><p class="ICOTE">18.12.17</p></td>
+                                <td><p class="ICOTE">08.01.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">LOW</span></p></td>
+                                <td><p class="ICOTE">05.01.18</p></td>
+                                <td><p class="ICOTE">31.01.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">LOW</span></p></td>
+                                <td><p class="ICOTE">10.05.18</p></td>
+                                <td><p class="ICOTE">30.06.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">PENDING</span></p></td>
+                                <td><p class="ICOTE">05.11.17</p></td>
+                                <td><p class="ICOTE">23.11.17</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">LOW</span></p></td>
+                                <td><p class="ICOTE">11.12.17</p></td>
+                                <td><p class="ICOTE">30.12.17</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #FF0004;">LOW</span></p></td>
+                                <td><p class="ICOTE">12.01.18</p></td>
+                                <td><p class="ICOTE">25.03.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">VERY LOW</span></p></td>
+                                <td><p class="ICOTE">17.01.18</p></td>
+                                <td><p class="ICOTE">31.01.18</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">VERY LOW</span></p></td>
+                                <td><p class="ICOTE">21.11.17</p></td>
+                                <td><p class="ICOTE">15.12.17</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">VERY LOW</span></p></td>
+                                <td><p class="ICOTE">01.11.17</p></td>
+                                <td><p class="ICOTE">01.12.17</p></td>
+                                <td><p class="ICOStage">ICO</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOTE">20.11.17</p></td>
+                                <td><p class="ICOTE">11.12.17</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOTE">18.11.17</p></td>
+                                <td><p class="ICOTE">09.12.17</p></td>
+                                <td><p class="ICOStage"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #7B7B7B;">CLOSED</span></p></td>
+                                <td><p class="ICOTE">08.12.17</p></td>
+                                <td><p class="ICOTE">20.12.17</p></td>
+                                <td><p class="ICOStage">EXCHANGE</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                                <td><p class="ICOTE">25.12.17</p></td>
+                                <td><p class="ICOTE">18.01.18</p></td>
+                                <td><p class="ICOStage"><span style="color: #A70002;">SCAM</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                                <td><p class="ICOTE">15.10.17</p></td>
+                                <td><p class="ICOTE">29.11.17</p></td>
+                                <td><p class="ICOStage"><span style="color: #A70002;">SCAM</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="ICOHSM"><span style="color: #A70002;">SCAM</span></p></td>
+                                <td><p class="ICOTE">01.12.17</p></td>
+                                <td><p class="ICOTE">20.12.17</p></td>
+                                <td><p class="ICOStage"><span style="color: #A70002;">SCAM</span></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- CC Exchange -->
+    <section style="padding-top: 50px; margin-top: 40px; background-image: url(images/BGCCEXCCMK.png)" id="CCEXCHANGE">
+        <div class="container-fluid">
+            <div class="row">
+                <center>
+                    <h1>Cryptocurrency Exchanges</h1>
+                </center>
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/Binance.jpg" width="50%" />
+                            <a href="https://www.binance.com/" target="_blank"><img src="images/Binancetrade1.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://www.binance.com/" target="_blank"><img src="images/binancelogo.png" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://www.binance.com/" target="_blank"><img src="images/Binance.jpg" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/bibox.jpeg" width="50%" />
+                            <a href="https://www.bibox.com/" target="_blank"><img src="images/biboxtrade.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://www.bibox.com/" target="_blank"><img src="images/biboxlogo.png" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://www.bibox.com/" target="_blank"><img src="images/bibox.jpeg" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/bittrex.jpg" width="50%" />
+                            <a href="https://bittrex.com/" target="_blank"><img src="images/bittrextrade.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://bittrex.com/" target="_blank"><img src="images/bittrexlogo.jpg" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://bittrex.com/" target="_blank"><img src="images/bittrex.jpg" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/poloniex.png" width="50%" />
+                            <a href="https://poloniex.com/" target="_blank"><img src="images/poloniextrade.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://poloniex.com/" target="_blank"><img src="images/poloniexlogo.jpg" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://poloniex.com/" target="_blank"><img src="images/poloniex.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/bithumb.png" width="50%" />
+                            <a href="https://www.bithumb.com/" target="_blank"><img src="images/bithumbtrade.png" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://www.bithumb.com/" target="_blank"><img src="images/bithumblogo.png" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://www.bithumb.com/" target="_blank"><img src="images/bithumb.png" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/coinex.png" width="50%" />
+                            <a href="https://www.coinex.com/" target="_blank"><img src="images/coinextrade.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://www.coinex.com/" target="_blank"><img src="images/coinexlogo.png" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://www.coinex.com/" target="_blank"><img src="images/coinex.png" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/bitmex1.png" width="50%" />
+                            <a href="https://www.bitmex.com/" target="_blank"><img src="images/bitmextrade.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo" style="margin-top: 25px;">
+                            <a href="https://www.bitmex.com/" target="_blank"><img src="images/bitmexlogo.png" /></a>
+                        </div>
+                        <div class="CCnameimg" style="margin-top: 45px;">
+                            <a href="https://www.bitmex.com/" target="_blank"><img src="images/bitmex1.png" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="CCexchange">
+                        <span class="caption">
+                            <img src="images/bitfinex.png" width="50%" />
+                            <a href="https://www.bitfinex.com/" target="_blank"><img src="images/bifinextrade.png" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://www.bitfinex.com/" target="_blank"><img src="images/bitfinexlogo.jpg" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://www.bitfinex.com/" target="_blank"><img src="images/bitfinex.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- CC Market -->
+    <section style="padding-top: 50px; margin-bottom: 40px; background-image: url(images/BGCCEXCCMK.png)" id="CCMARKET">
+        <div class="container-fluid">
+            <div class="row">
+                <center>
+                    <h1>Cryptocurrency Market</h1>
+                </center>
+                <div class="col-md-4">
+                    <div class="CCmarket">
+                        <span class="caption">
+                            <div class="CCMK">
+                                <img src="images/trustdex.png" width="50%" />
+                            </div>
+                            <a href="https://trustdex.io/" target="_blank"><img src="images/trustdextrade.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://trustdex.io/" target="_blank"><img src="images/trustdexlogo.png" /></a>
+                        </div>
+                        <div class="CCnameimg" style="margin-top: 90px;">
+                            <a href="https://trustdex.io/" target="_blank"><img src="images/trustdex.png" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="CCmarket">
+                        <span class="caption">
+                            <div class="CCMK">
+                                <img src="images/remitano.png" width="50%" />
+                            </div>
+                            <a href="https://remitano.com/vn" target="_blank"><img src="images/remitanotrade.PNG" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://remitano.com/vn" target="_blank"><img src="images/remitanologo.png" /></a>
+                        </div>
+                        <div class="CCnameimg" style="margin-top: 80px;">
+                            <a href="https://remitano.com/vn" target="_blank"><img src="images/remitano.png" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="CCmarket">
+                        <span class="caption">
+                            <div class="CCMK">
+                                <img src="images/coinbase.png" width="50%" />
+                            </div>
+                            <a href="https://www.coinbase.com/" target="_blank"><img src="images/coinbasetrade.jpg" height="100%" /></a>
+                        </span>
+                        <div class="CClogo">
+                            <a href="https://www.coinbase.com/" target="_blank"><img src="images/coinbaselogo.jpg" /></a>
+                        </div>
+                        <div class="CCnameimg">
+                            <a href="https://www.coinbase.com/" target="_blank"><img src="images/coinbase.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- Information Technology -->
+    <section class="container-fluid" id="INFOTECH" style="background-image: url(images/BGins.jpg); padding-top: 50px;">
+        <div>
+            <center>
+                <h1>Information Technology</h1>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 IT">
+                <center>
+                    <br>
+                    <br>
+                    <h3>Blockchain</h3>
+                    <br>
+                    <br>
+                    <img src="images/Blockchain.jpg" width="30%" />
+                </center>
+                <h6>What is blockchain?</h6>
+                <p>All of a sudden, blockchain is everywhere. The technology, which was invented in 2008 to power Bitcoin when it launched a year later, is being used for everything from copyright protection to sexual consent (yes, really).</p>
+                <p>Considering the daily churn of news around blockchain, not to mention the skyrocketing value of Bitcoin and other cryptocurrencies that rely on the technology, you may be wondering what the hell blockchain actually is. It’s actually a pretty simple concept, though things quickly get more complicated the harder you look.</p>
+                <p>With that in mind, here are a few different ways to wrap your head around blockchain, from straightforward definitions to far-reaching metaphors.</p>
+                <br>
+                <br>
+
+                <h6>How Does Blockchain Work?</h6>
+                <p>To start, here’s the simplest explanation with no metaphors or hyperbole. In the language of cryptocurrency, a block is a record of new transactions (that could mean the location of cryptocurrency, or medical data, or even voting records). Once each block is completed it’s added to the chain, creating a chain of blocks: a blockchain.</p>
+                <p>Because cryptocurrencies are encrypted, processing any transactions means solving complicated math problems (and these problems become more difficult over time as the blockchain grows). People who solve these equations are rewarded with cryptocurrency in a process called “mining.”</p>
+                <p>If you own any cryptocurrency, what you really have is the private key (basically just a long password) to its address on the blockchain. With this key you can withdraw currency to spend, but if you lose the key there’s no way to get your money back. Each account also has a public key, which lets other people send cryptocurrency to your account.</p>
+                <p>Information on the blockchain is also publicly available. It’s decentralized, meaning it doesn’t rely on a single computer or server to function. So any transactions are instantly visible to everyone. That brings us to our first metaphor: the public ledger.</p>
+                <br>
+                <br>
+
+                <h6>Blockchain Is Like a Public Ledger</h6>
+                <p>If you send Bitcoin (or some other cryptocurrency) to a friend, or sell it, that information is publicly available on the blockchain. Other people may not know your identity, but they know exactly how much value has been transferred from one person to another.</p>
+                <p>Many people see blockchain as an alternative to traditional banking. Instead of needing a bank or some other institution to verify the transfer of money, you can use blockchain and eliminate the middle man.</p>
+                <br>
+                <br>
+
+                <h6>“The Internet of Value”</h6>
+                <p>Building off the idea of a public ledger, another popular way to describe blockchain is as the internet of value. The idea is pretty simple: the internet made it possible to freely distribute data online, blockchain does the same thing for money.</p>
+                <p>Instead of relying on newspapers, television and radio (which are mainly controlled by big corporations), the internet gives everyone a voice—for better or worse. Blockchain and cryptocurrency make it just as easy to transfer money across the world by bypassing traditional middlemen like banks and even governments.</p>
+                <br>
+                <br>
+
+                <h6>Blockchain Is Like Google Docs</h6>
+                <p>Here’s a clever metaphor for blockchain from William Mougayar, the author of The Business Blockchain: blockchain is like Google Docs.</p>
+                <p>Before Google Docs, if you wanted to collaborate on a piece of writing with someone online you had to create a Microsoft Word document, send it to them, and then ask them to edit it. Then you had to wait until they made those changes, saved the document, and sent it back to you.</p>
+                <p>Google Docs fixed that by making it possible for multiple people to view and edit a document at the same time. However, most databases today still work like Microsoft Word: only one person can make changes at a time, locking everyone else out until their done. Blockchain fixes that by instantly updating any changes for everyone to see.</p>
+                <p>For banking, that means that any money transfers are simultaneously verified on both ends. Blockchain could also be used in the legal business or architecture planning— really any business where people need to collaborate on documents.</p>
+                <br>
+                <br>
+                <center>
+                    <img src="images/ITBlockchain.jpg" width="30%" />
+                </center>
+
+                <h6>Blockchain Is Like a Row of Safes</h6>
+                <p>Here’s another useful explanation from online forum Bitcoin Talk. This one does a really good job of explaining how public and private keys work:</p>
+                <p><b><i>"Imagine there are a bunch of safes lined up in a giant room somewhere. Each safe has a number on it identifying it, and each safe has a slot that allows people to drop money into it. The safes are all made of bulletproof glass, so anybody can see how much is in any given safe, and anybody can put money in any safe. When you open a bitcoin account, you are given an empty safe and the key to that safe. You take note of which number is on your safe, and when somebody wants to send you money, you tell them which safe is yours, and they can go drop money in the slot."</i></b></p>
+                <br>
+                <br>
+
+                <h6>Blockchain Is Like DNA</h6>
+                <p>Finally, this one, from Robin Chauhan on Medium, is a little far out, but I like it.</p>
+                <p>Blockchain is a record of transactions, spreading across the internet as more people use cryptocurrencies. Similarly, DNA is a record of genetic transactions and mutations that spread as life expanded across the earth. Both become more complicated over time as our DNA evolves and new blocks are added to the blockchain.</p>
+                <p>Each blockchain (Bitcoin, Ether, Ripple) is like as a distinct species (human, chimpanzee, etc.). A blockchain can also be forked (like with Bitcoin Cash) to create a competing currency in the same way that two distinct species can share common ancestor.</p>
+                <p>Of course, changes to DNA don’t happen easily—scientists believe it takes about a million years for a genetic mutation to catch on—and building a blockchain isn’t easy, either. The process of evolution and natural selection is a little bit like mining, a complicated series of steps that creates something incredible.</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 IT">
+                <center>
+                    <br>
+                    <br>
+                    <h3>Smart Contract</h3>
+                    <br>
+                    <br>
+                    <img src="images/Smartcontract3.jpeg" width="30%" />
+                </center>
+                <h6>What is smart contract?</h6>
+                <p>A smart contract, also known as a cryptocontract , is a computer program that directly controls the transfer of digital currencies or assets between parties under certain conditions. </p>
+                <p>A smart contract not only defines the rules and penalties related to an agreement in the same way that a traditional contract does, but it can also automatically enforce those obligations.</p>
+                <p>It does this by taking in information as input, assigning a value to that input through the rules set out in the contract and executing the actions required by those contractual clauses -- for example, determining whether an asset should go to one person or should be returned to the other person from whom the asset originated.</p>
+                <p>These contracts are stored on <b><i>blockchain</i></b> technology, a decentralized ledger that also underpins bitcoin and other cryptocurrencies.</p>
+                <br>
+                <br>
+
+                <h6>What smart contracts do</h6>
+                <p>Smart contracts are complex, and their potential goes beyond the simple transfer of assets -- they can execute transactions in a wide range of fields, from legal processes to insurance premiums to <i>crowdfunding</i> agreements to financial derivatives. Smart contracts have the potential to disintermediate the legal and financial fields; in particular, by simplifying and automating routine and repetitive processes for which people currently pay lawyers and banks sizable fees.</p>
+                <p>The role of lawyers could also shift in the future as smart contracts gain traction in areas from adjudicating traditional legal contracts to producing customizable smart contract templates. Additionally, smart contracts' ability not only to automate processes, but also to control behavior, as well as their potential with real-time auditing and risk assessments, can be beneficial to compliance.</p>
+                <br>
+                <br>
+
+                <center>
+                    <img src="images/Smartcontract2.jpeg" width="30%" />
+                </center>
+                <h6>Smart contract history and creation</h6>
+                <p>The notion of smart contracts was first proposed by Nick Szabo in 1994. Szabo is a legal scholar and cryptographer known for laying the groundwork for digital currency. Back then, there was little interest or activity in smart contracts because there was no digital platform or distributed ledger that could support them.</p>
+                <p>In 2008, the cryptocurrency bitcoin was developed via a blockchain platform comprised of a digital and distributed ledger that tracks monetary transactions. This technology enabled the development of smart contract code that is used to enter all the terms of the contract into the blockchain.</p>
+                <p>Many platforms now allow for the use of smart contracts, including Ethereum, bitcoin and Nxt. Today, with the growing adoption of bitcoin and the support of blockchain technologies, smart contracts are growing in popularity, often built on top of digital currencies to trigger payments.</p>
+                <br>
+                <br>
+
+                <h6>Smart contract applications and blockchain</h6>
+                <p>Blockchain is ideal for storing smart contracts because of the technology's security and immutability. Smart contract data is encrypted on a shared ledger, making it impossible to lose the information stored in the blocks.</p>
+                <p>Another advantage of blockchain technology being incorporated into smart contracts is flexibility. Developers are able to store almost any type of data within a blockchain, and they have a wide variety of transaction options to choose from during smart contract deployment.</p>
+                <p>Blockchain-based smart contracts are helping make business and other transactions more secure, efficient and cost-effective.</p>
+                <p>For example, in 2016, Cook County, Ill., used blockchain to create a database to transfer and track property titles. When these transactions occur, in addition to the traditional paper deed, the buyer receives a digital token that can be used as proof of ownership.</p>
+                <p>A variety of industries could benefit from using blockchain-based smart contracts as part of their supply chain. Automating healthcare payment processes using smart contracts can reduce overbilling and prevent fraud. The music industry could record the ownership of music in the blockchain, and then deploy a smart contract to ensure royalties are paid when the music is used for commercial purposes. Smart contracts and the blockchain could benefit the automobile industry by storing readily available information about vehicle maintenance and accident and ownership history.</p>
+                <br>
+                <br>
+
+                <center>
+                    <img src="images/Smartcontract1.jpeg" width="60%" />
+                </center>
+                <h6>Smart contract advantages and disadvantages</h6>
+                <p>There are several potential business advantages when using smart contracts.</p>
+                <p><b>Cost-efficiency.</b> Smart contracts eliminate many operational expenses and save resources, including the personnel needed to monitor their progress.</p>
+                <p><b>Processing speed.</b> Smart contracts run on automated processes and, in most cases, can eliminate human involvement, increasing the speed of business transactions stipulated in the contract.</p>
+                <p><b>Autonomy.</b> Smart contracts are performed automatically by the network, eliminating the need and associated risk of a third party being involved in smart contract deployment.</p>
+                <p><b>Reliability.</b> Data entered in the blockchain cannot be changed or deleted. If one party does not complete its obligations, the other will be protected by the conditions of the smart contract. The automated transactions also remove the potential for human error and ensure accuracy when executing the contracts.</p>
+                <p>There are numerous potential disadvantages to smart contracts, as well. A lack of international regulations focusing on blockchain , cryptocurrencies and smart contracts makes these technologies difficult to monitor in the global economy.</p>
+                <p>Smart contracts are also complicated to implement. They are also impossible to change, and while this is considered a security-related advantage, the parties cannot make any changes to the smart contract agreement or incorporate new details without developing a new contract.</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- WALLET -->
+    <section id="WALLET" style="padding-top: 50px; background-image: url(images/BGins.jpg)">
+        <div class="container-fluid">
+            <center>
+                <h1>Wallet</h1>
+            </center>
+            <div class="row">
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W1.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Hướng dẫn cách tạo ví Ethereum (ETH) trên MyEtherWallet mới nhất 2018</h6>
+                        </a>
+                        <p>Cập nhật: Hiện tại một số bạn có phản hồi với Blog tiền ảo là bị hack ví MyEtherWallet (MEW) và mất hết Ethereum...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W3.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Coinbase là gì? Hướng dẫn cách tạo và sử dụng ví Bitcoin, Ethereum, Bitcoin...</h6>
+                        </a>
+                        <p>Coinbase - Ở bài trước mình đã hướng dẫn các bạn cách tạo ví bitcoin trên Blockchain cũng như cách sử dụng ví blockchain từ...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W4.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Ví Exodus là gì? Đánh giá ví điện tử lữu trữ BTC, ETH, LTC,...</h6>
+                        </a>
+                        <p>Ví Exodus là gì? Exodus là một loại ví điện tử phầm mềm cài đặt trực tiếp trên máy tính cá nhân để lưu trữ...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W5.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Ví giấy Bitcoin là gì? Hướng dẫn tạo một chiếc ví giấy để lưu...</h6>
+                        </a>
+                        <p>Trong các giải pháp lưu trữ Bitcoin an toàn và tiện dụng ngày nay thì có lẽ bạn không thể bỏ qua ví giấy...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W6.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Hướng dẫn cài đặt và sử dụng ví Trezor – Ví cứng lưu trữ...</h6>
+                        </a>
+                        <p>Hi các bạn. Ở bài trước mình đã cùng các bạn đánh giá ví Trezor khá chi tiết rồi, như đã hứa thì hôm...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W7.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Ví Trezor là gì? Đánh giá ví điện tử lưu trữ Bitcoin, ETH, LTC,...</h6>
+                        </a>
+                        <p>Ví Trezor là gì? Trezor là một loại ví trữ lạnh hay còn gọi là ví cứng (ví lưu trữ ngoại tuyến) được phát hành vào...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W8.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Hướng dẫn cách tạo ví Jaxx lưu trữ Bitcoin, Ethereum, LTC, ETC, DASH, Zcash,..Từ...</h6>
+                        </a>
+                        <p>Hi các bạn. Bài trước mình đã cùng các bạn đánh giá ví Jaxx một loại ví tiền điện tử dùng để lưu trữ...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W9.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Ví Jaxx là gì? Đánh giá ví điện tử lưu trữ BTC, ETH, ETC,...</h6>
+                        </a>
+                        <p>Ví Jaxx là gì? Jaxx là một loại ví tiền điện tử cho phép bạn lưu trữ nhiều đồng tiền kỹ thuật số khác nhau...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W10.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Hướng dẫn cách tạo ví Bitcoin Cash (BCH hay BCC) trên máy tính với...</h6>
+                        </a>
+                        <p>Bitcoin cash (BCH hay BCC coin) là đồng tiền đang làm mưa làm gió trong thị trường tiền điện tử suốt thời gian vừa...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 WL">
+                    <div class="col-md-4">
+                        <img src="images/W2.jpg" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#" target="_blank">
+                            <h6>Hướng dẫn sử dụng Ledger Nano S – Ví lạnh lữu trữ Bitcoin, Ethereum...</h6>
+                        </a>
+                        <p>Ledger Nano S là gì? Ví Ledger Nano S (ví cứng hay ví lạnh) là một thương hiệu ví lưu trữ tiền điện tử hàng...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- INSTRUCTION -->
+    <section id="INSTRUCTION" style="padding-top: 50px; background-image: url(images/BGins.jpg)">
+        <center>
+            <h1>How To Make Profit From This Market?</h1>
+        </center>
+        <section id="TRADE" class="instruction container-fluid">
+            <center>
+                <h3>Trading</h3>
+                <br>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <center>
+                        <iframe width="80%" height="500" src="https://www.youtube.com/embed/72ovYNCgWm0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <h5>What is trading?</h5>
+                    <br>
+                    <br>
+                    <p>Trading on equity is buying and selling of stocks to make a profit of the stock markets.  Traders take a short term view/opinion/timeframe in which they buy stocks, make a profit and sell the stocks.</p>
+                    <br>
+                    <p>One shold beware that while trading, you must have strict stop loss( fail safe) price and a target price in mind for the stock. Else it becomes too risky. </p>
+                    <br>
+                    <p>Unlike investors, traders are looking for short term gains based on market movement. They generally trade in the low margin high volume category.</p>
+                    <br>
+                    <p>Traders normally tend to participate in intraday trades, where the buy and sell the stock in the same trading session. This is so that they can churn their capital more times and get profits.</p>
+                    <br>
+                    <p>To be successful in trading you don't need to know about the entire market. Take a couple of stocks and study them, notice how the fluctuate with the broader maker and indices. Do some apparat trades where you just note down the price at which you are buying the stock...when you hit it right a couple of times .. Start with a small amount. </p>
+                    <br>
+                    <p>Please note that making fast money everyday in the market is not possible. As a trader someday you will earn, someday you will lose.</p>
+                    <br>
+                    <p>For any more clarifications email me at <a href="#">hungtqvse130178@fpt.edu.vn</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="LEND" class="instruction container-fluid">
+            <center>
+                <h3>Lending</h3>
+                <br>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>A lending model will typically operate in the following format:</h5>
+                    <br>
+                    <br>
+                    <p>Step 1: You use a type of Crypto base (commonly known as copper base, copper base, co-intermediary ... like Bitcoin / Eth ... These are large crypto types to buy new Lending coin.</p>
+                    <br>
+                    <p>Step 2: You receive the corresponding Crypto Lending amount, and there are two options: Hold for a raise, or Lending to receive monthly interest. (Depending on the orientation of the floor owners, the ratio, operation method, deployment can be adjusted differently)</p>
+                    <br>
+                    <p>Step 3: If you choose to keep waiting for the price increase, then you just keep it, bring on the floor, see the price is appropriate for sale, if the order is matched, you get $$$.</p>
+                    <br>
+                    <p>Step 4: If you choose Lending, the amount of Crypto Lending will be converted to USD, you will receive dividends per day / week / month based on the amount of USD, usually fluctuate 30-50% / month. pay back in 2-4 months).</p>
+                    <br>
+                    <p>Step 5: Or you can choose both.</p>
+                    <br>
+                    <p>My opinion...Stay away from MLM ponzi schema.</p>
+                    <p>For any more clarifications email me at <a href="#">hungtqvse130178@fpt.edu.vn</a></p>
+                </div>
+                <div class="col-md-6">
+                    <center>
+                        <iframe width="80%" height="500" src="https://www.youtube.com/embed/cE5JhUTD4cM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </center>
+                </div>
+            </div>
+        </section>
+        <section id="STAKE" class="instruction container-fluid">
+            <center>
+                <h3>Staking</h3>
+                <br>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <center>
+                        <iframe width="80%" height="500" src="https://www.youtube.com/embed/e9-Ys-u7TgU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <h5>What is staking?</h5>
+                    <br>
+                    <br>
+                    <p>Normally you mine with your computer and get coins as a reward. Thats how transactions are confirmed. Thats called Proof of Work (PoW). But there is also a System called Proof of Stake (PoS).</p>
+                    <br>
+                    <h5>What is staking?</h5>
+                    <br>
+                    <p>There are also coins, that combine PoW and PoS. In general there are 3 possible ways: </p>
+                    <br>
+                    <p>1. Only PoS coins, that are "premined" and just sold in an IPO (NXT, NEM)</p>
+                    <br>
+                    <p>2. Use of PoW and PoS hybrid (Peercoin)</p>
+                    <br>
+                    <p>3. Use of PoW only as a distribution method until a certain time and then use only PoW (Blackcoin, Bitz)</p>
+                    <br>
+                    <p>I think its a matter of taste, what is better. I personally like the 1. and 3. option the most.</p>
+                    <br>
+                    <p>For any more clarifications email me at <a href="#">hungtqvse130178@fpt.edu.vn</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="MINE" class="instruction container-fluid">
+            <center>
+                <h3>Mining</h3>
+                <br>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>A lending model will typically operate in the following format:</h5>
+                    <br>
+                    <br>
+                    <p>Bitcoin mining is the processing of transactions in the digital currency system, in which the records of current Bitcoin transactions, known as a blocks, are added to the record of past transactions, known as the block chain.</p>
+                    <br>
+                    <p>Originally, Bitcoin mining was conducted on the CPUs of individual computers, with more cores and greater speed resulting in more profitability. After that, the system became dominated by multi-graphics card systems, then field-programmable gate arrays (FPGAs) and finally application-specific integrated circuits (ASICs), in the attempt to find more hashes with less electrical power usage. </p>
+                    <br>
+                    <p>Bitcoin generally started with individuals and small organizations mining. At that time, start-up could be enabled by a single high-end gaming system. Now, however, larger mining organizations might spend tens of thousands on one high-performance, specialized computer.</p>
+                    <br>
+                    <p>For any more clarifications email me at <a href="#">hungtqvse130178@fpt.edu.vn</a></p>
+                </div>
+                <div class="col-md-6">
+                    <center>
+                        <iframe width="80%" height="500" src="https://www.youtube.com/embed/GmOzih6I1zs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </center>
+                </div>
+            </div>
+        </section>
+        <section id="AIRDROPANDBOUNTY" class="instruction container-fluid" style="padding-bottom: 40px;">
+            <center>
+                <h3>Airdrop and Bounty</h3>
+                <br>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <center>
+                        <iframe width="80%" height="500" src="https://www.youtube.com/embed/at0EbNs7bVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <h5>What is Airdrop?</h5>
+                    <br>
+                    <br>
+                    <p>It's free coins,the dev of the coin will give people according to his set preferences could be members of this forum with junior rank and higher I already participate in 5 airdrop and made a good profit from those coins,You can check the altcoin announcement for airdrop,it's the easiest way to build community,because everybody here loves free coins.</p>
+                    <br>
+                    <h5>What is bounty program?</h5>
+                    <br>
+                    <p>Bounties in the digital word take their origin from online gaming platforms that offered rewards for participating in their game development. Bounties are essentially incentivized reward mechanisms offered by companies to individuals. What this means is that a company introducing a product or a service offers some rewards to people in exchange for performing certain tasks. It is akin to a barter trade of sorts; the company gives rewards to a person and the person in return does some simple tasks for the company. It is a veritable means of advertising for many companies.)</p>
+                    <br>
+                    <p>For any more clarifications email me at <a href="#">hungtqvse130178@fpt.edu.vn</a></p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- SIGN UP -->
+    <section id="SIGNUP" style="padding-top: 50px;">
+        <div class="container-fluid">
+            <center>
+                <h1>About us</h1>
+            </center>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <h4>Register by filling in the form to have a chance to join our team !!</h4>
+                    <form>
+                        <table width="100%" style="border-collapse: collapse; text-align: left;">
+                            <tbody>
+                                <tr>
+                                    <td width="35%" height="50"><label for="userfirstname"><p>First Name: </p></label></td>
+                                    <td width="65%"><input style="height: 50px; width: 100%" name="userfisrtname" type="text" id="userfirstname" placeholder="Enter First Name" required /></td>
+                                </tr>
+                                <tr>
+                                    <td width="35%" height="50"><label for="userlastname"><p>Last Name: </p></label></td>
+                                    <td width="65%"><input style="height: 50px; width: 100%" name="userlastname" type="text" id="userlastname" placeholder="Enter Last Name" required /></td>
+                                </tr>
+                                <tr>
+                                    <td width="35%" height="50"><label for="email"><p>Email: </p></label></td>
+                                    <td width="65%"><input style="height: 50px; width: 100%" name="email" type="text" id="email" placeholder="e.g: hungtqvse130178@fpt.edu.vn" required /></td>
+                                </tr>
+                                <tr>
+                                    <td width="35%" height="50"><label for="address"><p>Address: </p></label></td>
+                                    <td width="65%"><input style="height: 50px; width: 100%" name="address" type="text" id="address" placeholder="e.g: 447 Le Van Luong, Distric 7" required /></td>
+                                </tr>
+                                <tr>
+                                    <td width="35%" height="50"><label for="phone"><p>Phone No: </p></label></td>
+                                    <td width="65%"><input name="phone" style="height: 50px; width: 100%" type="tel" id="phone" placeholder="e.g: 01214124833" required /></td>
+                                </tr>
+                                <tr>
+                                    <td width="35%" height="50"><label for="date"><p>Birthday: </p></label></td>
+                                    <td width="65%"><input style="height: 50px; width: 100%" type="date" name="date" id="date" required /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><p class="text-center"> - </p></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button style="width: 45%; float: left; margin-left: 10px;" type="submit" class="btn btn-block btn-lg btn-primary">Submit</button>
+                                        <button style="width: 45%; float: right; margin-top: 0px; margin-right: 10px;" type="reset" class="btn btn-block btn-lg btn-primary">Cancel</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="col-md-6" style="padding-top: 25px;">
+                    <center>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9565839584766!2d106.7011103147292!3d10.73782966284132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9904ec6711%3A0xea3053f128756fc6!2zNDQ3IEzDqiBWxINuIEzGsMahbmcsIFTDom4gSMawbmcsIFF14bqtbiA3LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1529590471278" width="70%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- FOOTER -->
+    <footer class="footer" style="background-color: #000000; padding-top: 30px; padding-bottom: 30px; margin-top: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100" style="text-indent: 200px; color: #BFB3B3;">
+                    <h4 class="text-center">Donate</h4>
+                    <p>BTC: 1KmHKMAkTiMQhBXAMfHBQ1e7d18ud3uB47</p>
+                    <p>ETH: 0x0133e35487b952c25a629faf82fbf3b0307f48fa</p>
+                    <p>NEO: AQSqn7D4TtUnNrwsFjHPVmVBBLgmPZSxc5</p>
+                    <p>LTC: LYCMxA7xNrxho4pf9pMNJVf7WpfZgFdWBA</p>
+                    <p class="text-muted small mb-4 mb-lg-0 text-center">&copy; GodDZ CryptoCurrency Blog</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <center>
+                            <h4 style="color: #A7A0A0;">Contact us:</h4>
+                            <br>
+                            <br>
+                        </center>
+                        <li class="list-inline-item mr-3">
+                            <a href="https://www.facebook.com/HungTQV.GodDZ" target="_blank">
+                                <i class="fa fa-facebook fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="https://twitter.com/tqvinhhung4399" target="_blank">
+                                <i class="fa fa-twitter fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/tqvinhhung4399/" target="_blank">
+                                <i class="fa fa-instagram fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- Telegram A&B -->
+    <iframe class="tgwidget tgwidget-short" src="https://tgwidget.com/widget/count/?id=5b51a60483ba8846238b4567" frameborder="0" scrolling="no" horizontalscrolling="no" verticalscrolling="no" width="160px" height="50px" style="position: fixed; bottom: 30px; right: 30px;" async=""></iframe>
+
+    <!-- ****************************************************************************************************** -->
+    <!-- JS -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ****************************************************************************************************** -->
+    <!-- JS sticky navbar -->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
